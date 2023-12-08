@@ -1,31 +1,11 @@
-# Databricks notebook source
-# MAGIC %md ### Consumo de dados de API (cotações e indicadores)
-
-# COMMAND ----------
-
-# MAGIC %md #### Instalação e atualização de bibliotecas específicas
-
-# COMMAND ----------
-
-#atualização do pacote adm de biblio
 #pip install --upgrade pip
-
-# COMMAND ----------
 
 # instalando a biblioteca datetime
 #pip install datetime
 
-# COMMAND ----------
-
 # biblioteca do bcb e do componente lxml
 #pip install python-bcb
 #pip install lxml
-
-# COMMAND ----------
-
-# MAGIC %md #### Importação de bibliotecas
-
-# COMMAND ----------
 
 # importando as bibliotecas
 
@@ -35,12 +15,6 @@ import pandas as pd
 import json
 import datetime as dt
 from datetime import timedelta
-
-# COMMAND ----------
-
-# MAGIC %md #### Construção das funções para coleta das API's e elaboração do Dataframe Spark
-
-# COMMAND ----------
 
 #Coletar a cotação do dólar,euro e btc (último fechamento)
 #_____________________________________________________________
@@ -120,27 +94,9 @@ def df_cotacoes(d=0):
     df_cotacoes = pd.concat([df_dolar, df_euro, df_btc, selic, ipca,selic_acum_12m, igpm_mes], axis=1)
     return df_cotacoes
 
-# COMMAND ----------
-
-# MAGIC %md #### Conexão com SQL Server e carga do Dataframe na tabela
-
-# COMMAND ----------
-
-# criação do df spark com uso da função
+# criação do df com uso da função
 
 df = df_cotacoes()
 print(df)
 
-
-# COMMAND ----------
-
-# encapsulamento de dados sensíveis - usuário e senha
-
-
-# COMMAND ----------
-
-# carga na tabela SQL
-
-
-# COMMAND ----------
 
