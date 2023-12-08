@@ -1,10 +1,12 @@
-Este projeto realiza a extração de cotações, moedas e dados macroeconômicos de API's do Banco do Brasil, Awesome API e SGS, compilando estes dados num dataframe.
+## Este projeto realiza a extração de cotações, moedas e dados macroeconômicos de API's do Banco do Brasil, Awesome API e SGS, compilando estes dados num dataframe.
 
 ### O script coleta dados das seguintes APIs:
 
-API do Banco Central do Brasil (BCB): O script utiliza a biblioteca bcb para acessar os dados do Banco Central do Brasil. A biblioteca bcb fornece uma interface para a API do BCB, que fornece dados sobre a economia brasileira, incluindo a cotação do dólar, euro e Bitcoin 1.
-API AwesomeAPI: O script faz uma solicitação GET para a API AwesomeAPI para obter a cotação do Bitcoin. A URL da API é https://economia.awesomeapi.com.br/last/BTC-BRL 2.
-Essas APIs são usadas para coletar dados sobre a economia brasileira, incluindo a cotação do dólar, euro e Bitcoin, bem como informações sobre a taxa Selic e o Índice Geral de Preços ao Consumidor (IPCA). Esses dados são então armazenados em um DataFrame do pandas para análise posterior.
+**API do Banco Central do Brasil (BCB)**: O script faz uso da API do Banco Central do Brasil para coletar a cotação do dólar, euro e a taxa Selic. A API do BCB é acessada através do pacote bcb em Python. As funções cotacao_dolar(), cotacao_euro() e selic_meta() fazem solicitações a essa API para obter as informações necessárias.
+
+**API AwesomeAPI**: O script faz uso da API AwesomeAPI para coletar a cotação do Bitcoin. A API AwesomeAPI é acessada através do endpoint https://economia.awesomeapi.com.br/last/BTC-BRL.
+
+**API do BCB (SGS)**: O script faz uso da API do BCB para coletar a taxa Selic acumulada em 12 meses, o Índice Geral de Preços ao Consumidor (IGP-M) do mês e o Índice Nacional de Preços ao Consumidor (IPCA) do mês. As funções coleta_selic_12m(), coleta_igpm_mes() e ipca_mes() fazem solicitações a essa API para obter as informações necessárias 
 
 Este repositório contém um script Python que coleta dados de várias APIs e os armazena em um DataFrame do pandas. O script é executado dentro de um contêiner Docker, que pode ser construído a partir da imagem eltonguilherme15186/repo:v1.0.
 
