@@ -1,5 +1,8 @@
 #### Este projeto realiza a extração de cotações, moedas e dados macroeconômicos de API's do Banco do Brasil, Awesome API e SGS, compilando estes dados num dataframe.
 
+![image](https://github.com/elton-datasc/moedas_cotacoes/assets/67129543/010eba80-d747-4b22-824d-8ae832780b84)
+
+
 ### O script coleta dados das seguintes APIs:
 
 **API do Banco Central do Brasil (BCB)**: O script faz uso da API do Banco Central do Brasil para coletar a cotação do dólar, euro e a taxa Selic. A API do BCB é acessada através do pacote bcb em Python. As funções cotacao_dolar(), cotacao_euro() e selic_meta() fazem solicitações a essa API para obter as informações necessárias.
