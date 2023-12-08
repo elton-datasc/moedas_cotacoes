@@ -1,6 +1,7 @@
 #### Este projeto realiza a extração de cotações, moedas e dados macroeconômicos de API's do Banco do Brasil, Awesome API e SGS, compilando estes dados num dataframe.
 
-![image](https://github.com/elton-datasc/moedas_cotacoes/assets/67129543/010eba80-d747-4b22-824d-8ae832780b84)
+![image](https://github.com/elton-datasc/moedas_cotacoes/assets/67129543/e1fca79a-321b-4bd8-9c27-92c0df87fe10)
+
 
 
 ### O script coleta dados das seguintes APIs:
