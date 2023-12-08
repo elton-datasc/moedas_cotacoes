@@ -72,7 +72,7 @@ Para executar o script, você pode usar o seguinte comando:
 
 Isso irá puxar a imagem Docker necessária para executar o script e, em seguida, você pode executar o script dentro de um contêiner Docker.
 
-### Output esperado
+### Exemplo do utput esperado
 
 ![image](https://github.com/elton-datasc/moedas_cotacoes/assets/67129543/8253f790-e496-4956-a63c-99679cc38c93)
 
